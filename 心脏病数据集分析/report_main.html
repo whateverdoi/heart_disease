@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>心脏病数据集分析报告</title>
+    <style>
+        body { font-family: SimHei, Arial, sans-serif; margin: 40px; }
+        h1, h2, h3 { color: #2c3e50; }
+        img { max-width: 600px; margin: 20px 0; }
+        .section { margin: 30px 0; }
+        .highlight { background-color: #f8f9fa; padding: 15px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>心脏病数据集分析报告</h1>
+    
+    <div class="section">
+        <h2>1. 数据集基本信息</h2>
+        <p>样本数：1319，特征数：8</p>
+        <p>特征列表：Age, Gender, Heart rate, Systolic blood pressure, Diastolic blood pressure, Blood sugar, CK-MB, Troponin</p>
+    </div>
+
+    <div class="section">
+        <h2>2. 人口统计学分析</h2>
+        <h3>2.1 诊断结果分布</h3>
+        <img src="figs/result_dist.png">
+        <h3>2.2 性别与心脏病关系</h3>
+        <img src="figs/gender_result.png">
+        <h3>2.3 年龄分布</h3>
+        <img src="figs/age_dist.png">
+        <h3>2.4 年龄与心脏病关系</h3>
+        <img src="figs/age_result.png">
+    </div>
+
+    <div class="section">
+        <h2>3. 关键指标分析</h2>
+        <h3>3.1 各特征与诊断结果关系</h3>
+        
+            <h4>Age</h4>
+            <img src="figs/Age_box.png">
+        
+            <h4>Heart rate</h4>
+            <img src="figs/Heart rate_box.png">
+        
+            <h4>Systolic blood pressure</h4>
+            <img src="figs/Systolic blood pressure_box.png">
+        
+            <h4>Diastolic blood pressure</h4>
+            <img src="figs/Diastolic blood pressure_box.png">
+        
+            <h4>Blood sugar</h4>
+            <img src="figs/Blood sugar_box.png">
+        
+            <h4>CK-MB</h4>
+            <img src="figs/CK-MB_box.png">
+        
+            <h4>Troponin</h4>
+            <img src="figs/Troponin_box.png">
+        
+    </div>
+
+    <div class="section">
+        <h2>4. 风险因素分析</h2>
+        <h3>4.1 风险因素分布</h3>
+        <img src="figs/risk_factors_dist.png">
+        <h3>4.2 特征相关性热力图</h3>
+        <img src="figs/corr_heatmap.png">
+    </div>
+
+    <div class="section highlight">
+        <h2>5. 主要发现</h2>
+        <ul>
+            <li>人口统计学特征（年龄、性别）与心脏病的关系</li>
+            <li>关键生理指标（血压、心率）的分布特征</li>
+            <li>心肌标志物（CK-MB、肌钙蛋白）的诊断价值</li>
+            <li>各风险因素之间的相关性</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>6. 自动化数据分析报告</h2>
+        <p>详见附录：ydata-profiling自动生成的分析报告（report.html）。</p>
+    </div>
+</body>
+</html>

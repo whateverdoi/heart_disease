@@ -1,0 +1,25 @@
+心脏病风险预测模型评估报告
+==================================================
+
+模型准确率: 0.7992
+
+分类报告:
+              precision    recall  f1-score   support
+
+           0       0.76      0.69      0.73       101
+           1       0.82      0.87      0.84       163
+
+    accuracy                           0.80       264
+   macro avg       0.79      0.78      0.78       264
+weighted avg       0.80      0.80      0.80       264
+
+特征重要性:
+                         特征       重要性
+7                  Troponin  6.402186
+6                     CK-MB  6.023238
+0                       Age  0.564496
+1                    Gender  0.242407
+5               Blood sugar  0.106185
+3   Systolic blood pressure  0.061734
+4  Diastolic blood pressure  0.055459
+2                Heart rate  0.020033
