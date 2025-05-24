@@ -1,0 +1,25 @@
+随机森林心脏病风险预测模型评估报告
+==================================================
+
+模型准确率: 0.9811
+
+分类报告:
+              precision    recall  f1-score   support
+
+           0       0.98      0.97      0.98       101
+           1       0.98      0.99      0.98       163
+
+    accuracy                           0.98       264
+   macro avg       0.98      0.98      0.98       264
+weighted avg       0.98      0.98      0.98       264
+
+特征重要性:
+                         特征       重要性
+7                  Troponin  0.572752
+6                     CK-MB  0.260462
+0                       Age  0.052370
+5               Blood sugar  0.031693
+3   Systolic blood pressure  0.027971
+4  Diastolic blood pressure  0.023380
+2                Heart rate  0.019374
+1                    Gender  0.011997
