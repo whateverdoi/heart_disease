@@ -7,6 +7,7 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
+from joblib import dump
 
 # 设置中文字体
 plt.rcParams['font.sans-serif'] = ['SimHei']
@@ -84,4 +85,13 @@ with open(os.path.join(output_dir, 'model_evaluation_rf.txt'), 'w', encoding='ut
 
 print("\n随机森林模型评估结果已保存到 'model_evaluation_rf.txt'")
 print("随机森林特征重要性图已保存到 'figs/feature_importance_rf.png'")
-print("随机森林混淆矩阵图已保存到 'figs/confusion_matrix_rf.png'") 
+print("随机森林混淆矩阵图已保存到 'figs/confusion_matrix_rf.png'")
+
+# 新建models文件夹（如不存在）
+models_dir = os.path.join(output_dir, 'models')
+os.makedirs(models_dir, exist_ok=True)
+
+# 保存随机森林模型
+model_path = os.path.join(models_dir, 'random_forest_model.joblib')
+dump(rf_model, model_path)
+print(f"随机森林模型已保存到 '{model_path}'") 

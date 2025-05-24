@@ -7,6 +7,7 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
+from joblib import dump
 
 # 设置中文字体
 plt.rcParams['font.sans-serif'] = ['SimHei']
@@ -84,4 +85,13 @@ with open(os.path.join(output_dir, 'model_evaluation.txt'), 'w', encoding='utf-8
 
 print("\n模型评估结果已保存到 'model_evaluation.txt'")
 print("特征重要性图已保存到 'figs/feature_importance.png'")
-print("混淆矩阵图已保存到 'figs/confusion_matrix.png'") 
+print("混淆矩阵图已保存到 'figs/confusion_matrix.png'")
+
+# 新建models文件夹（如不存在）
+models_dir = os.path.join(output_dir, 'models')
+os.makedirs(models_dir, exist_ok=True)
+
+# 保存逻辑回归模型
+model_path = os.path.join(models_dir, 'logistic_regression_model.joblib')
+dump(model, model_path)
+print(f"逻辑回归模型已保存到 '{model_path}'") 
