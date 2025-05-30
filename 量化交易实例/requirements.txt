@@ -1,0 +1,4 @@
+akshare
+pandas
+scikit-learn
+numpy 
